@@ -6,7 +6,12 @@ let fishRepository = (function(){
   ];
 
   function add (fish) {
-    fishList.push(fish);
+    if (
+      typeof fish === "object" && "name" in fish) {
+        fishList.push(fish);
+      } else {
+        console.log("fish format is not correct!");
+      }
   }
 
   function getAll() {
