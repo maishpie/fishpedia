@@ -4,6 +4,6 @@ let fishList = [
   {name: 'Crucian Carp', location: 'River', time: 'All day'}
 ];
 
-for (let i=0; i<fishList.length; i++){
-  document.write(fishList[i].name + ', location:' + fishList[i].location)
-}
+fishList.forEach(function(fish){
+  document.write(fish.name + ', location:' + fish.location)
+})
